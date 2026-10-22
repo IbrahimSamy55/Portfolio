@@ -336,7 +336,7 @@ const hs=gsap.to(hw,{x:()=>-(hw.scrollWidth-innerWidth),ease:'none',scrollTrigge
 document.querySelectorAll('.card').forEach(cd=>{
   gsap.from(cd,{scale:.8,rotateY:-25,opacity:.3,scrollTrigger:{trigger:cd,containerAnimation:hs,start:'left right',end:'center center',scrub:true}});
   gsap.to(cd.querySelector('.art'),{xPercent:2,scrollTrigger:{trigger:cd,containerAnimation:hs,scrub:true}});
-  cd.addEventListener('mousemove',e=>{const r=cd.getBoundingClientRect();const fx=(e.clientX-r.left)/r.width-.5,fy=(e.clientY-r.top)/r.height-.5;gsap.to(cd,{rotateY:fx*10,rotateX:-fy*10,transformPerspective:900,duration:.5})});
+  cd.addEventListener('mousemove',e=>{const r=cd.getBoundingClientRect();const fx=(e.clientX-r.left)/r.width-.5,fy=(e.clientY-r.top)/r.height-.5;gsap.to(cd,{rotateY:fx*10,rotateX:-fy*10,transformPerspective:900,duration:.5});});
   cd.addEventListener('mouseleave',()=>gsap.to(cd,{rotateX:0,rotateY:0,duration:.8}))});
 
 // Services
