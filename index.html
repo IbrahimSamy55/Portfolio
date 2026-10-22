@@ -39,7 +39,7 @@ nav ul a:hover:after{transform:scaleX(1);transform-origin:left}
 .progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--a1),var(--a2),var(--a3));z-index:60;width:100%;transform-origin:left;transform:scaleX(0)}
 /* hero */
 #hero{height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;padding:0 5vw;overflow:hidden}
-#gl{position:absolute;inset:0;z-index:0}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:0}
 .blob{position:absolute;width:50vw;height:50vw;border-radius:50%;filter:blur(120px);opacity:.35;z-index:0;animation:float 14s ease-in-out infinite}
 .b1{background:var(--a1);top:-10%;left:-10%}.b2{background:var(--a2);bottom:-20%;right:-10%;animation-delay:-5s}.b3{background:var(--a3);top:30%;left:40%;width:30vw;height:30vw;animation-delay:-9s}
 @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(10vw,5vh) scale(1.2)}66%{transform:translate(-5vw,10vh) scale(.9)}}
@@ -188,7 +188,7 @@ kbd{font-family:inherit;font-size:12px;padding:2px 7px;border-radius:6px;border:
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   <div class="hero-c">
     <div class="tag hero-anim"><span class="dot"></span> Available for freelance — 2026</div>
-    <h1><span class="line"><span>Creative</span></span><span class="line"><span class="grad">Designer</span> <span class="outline">&amp;</span></span><span class="line"><span>Developer</span></span></h1>
+    <h1><span class="line"><span>Creative</span></span><span class="line"><span class="grad">Product</span></span><span class="line"><span class="outline">Designer</span></span></h1>
     <div class="hero-b hero-anim">
       <p>Hi, I'm Ebrahim — I craft <span class="typed"></span><br>experiences that people remember.</p>
       <a href="#work" class="btn magnetic"><span>View my work ↓</span></a>
@@ -238,7 +238,7 @@ kbd{font-family:inherit;font-size:12px;padding:2px 7px;border-radius:6px;border:
     <div class="bx w2 h2"><h5>Figma Wizard</h5><p>Advanced prototyping, auto‑layout & variables.</p><div class="ring"></div></div>
     <div class="bx"><h5>Framer</h5><p>Interactive sites.</p></div>
     <div class="bx"><h5>After Effects</h5><p>Motion graphics.</p></div>
-    <div class="bx w2"><h5>Front‑end</h5><p>HTML · CSS · GSAP · React</p><div class="bars"><i></i><i style="animation-delay:-.2s"></i><i style="animation-delay:-.5s"></i><i style="animation-delay:-.8s"></i><i style="animation-delay:-.3s"></i><i style="animation-delay:-.6s"></i><i style="animation-delay:-.1s"></i><i style="animation-delay:-.9s"></i></div></div>
+    <div class="bx w2"><h5>UX Research &amp; Testing</h5><p>Interviews · User flows · Usability tests · Iteration</p><div class="bars"><i></i><i style="animation-delay:-.2s"></i><i style="animation-delay:-.5s"></i><i style="animation-delay:-.8s"></i><i style="animation-delay:-.3s"></i><i style="animation-delay:-.6s"></i><i style="animation-delay:-.1s"></i><i style="animation-delay:-.9s"></i></div></div>
   </div>
 </section>
 
@@ -356,7 +356,7 @@ const N=120,g=new THREE.BufferGeometry(),p=new Float32Array(N*N*3),col=new Float
 const c1=new THREE.Color('#7c5cff'),c2=new THREE.Color('#00e5ff');
 for(let i=0;i<N;i++)for(let j=0;j<N;j++){const k=(i*N+j)*3;p[k]=(i-N/2)*.2;p[k+2]=(j-N/2)*.2;const c=c1.clone().lerp(c2,i/N);col[k]=c.r;col[k+1]=c.g;col[k+2]=c.b}
 g.setAttribute('position',new THREE.BufferAttribute(p,3));g.setAttribute('color',new THREE.BufferAttribute(col,3));
-const pts=new THREE.Points(g,new THREE.PointsMaterial({size:.05,vertexColors:true,transparent:true,opacity:.8}));sc.add(pts);
+const pts=new THREE.Points(g,new THREE.PointsMaterial({size:.05,vertexColors:true,transparent:true,opacity:.45}));sc.add(pts);
 function rs(){const w=cv.clientWidth,h=cv.clientHeight;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}rs();addEventListener('resize',rs);
 let t=0;(function loop(){t+=.015;const a=g.attributes.position.array;
 for(let i=0;i<N;i++)for(let j=0;j<N;j++){const k=(i*N+j)*3;a[k+1]=Math.sin(i*.15+t)*.6+Math.cos(j*.12+t*1.3)*.6}
