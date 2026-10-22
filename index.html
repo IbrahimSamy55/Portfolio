@@ -76,10 +76,6 @@ section{padding:120px 5vw;position:relative}
 h2{font-family:Syne;font-size:clamp(36px,6vw,90px);line-height:1;letter-spacing:-.03em;font-weight:800}
 .reveal-text{font-size:clamp(26px,3.6vw,54px);line-height:1.25;font-weight:500;max-width:1200px}
 .reveal-text .w{opacity:.12;display:inline-block;margin-right:.25em}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:80px}
-.stat{padding:36px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(160deg,rgba(255,255,255,.04),transparent)}
-.stat b{font-family:Syne;font-size:64px;display:block;background:linear-gradient(90deg,var(--fg),var(--mute));-webkit-background-clip:text;color:transparent}
-.stat small{color:var(--mute)}
 /* horizontal work */
 #work{padding:0;overflow:hidden}
 .work-head{padding:120px 5vw 40px}
@@ -94,12 +90,6 @@ h2{font-family:Syne;font-size:clamp(36px,6vw,90px);line-height:1;letter-spacing:
 .chip{padding:6px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.25);font-size:12px;backdrop-filter:blur(8px)}
 .arrow{flex-shrink:0;width:60px;height:60px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-size:22px;transition:transform .4s}
 .card:hover .arrow{transform:rotate(-45deg)}
-.art1{background:radial-gradient(circle at 30% 30%,#7c5cff,transparent 50%),radial-gradient(circle at 70% 70%,#ff3d81,transparent 50%),#120a2a}
-.art2{background:conic-gradient(from 90deg at 50% 50%,#00e5ff,#003b5c,#7c5cff,#00e5ff)}
-.art3{background:repeating-linear-gradient(45deg,#ff3d81 0 2px,transparent 2px 40px),radial-gradient(circle at 50% 40%,#ff9a3d,#3a0a1f 70%)}
-.art4{background:radial-gradient(circle at 50% 120%,#2dff8a,transparent 60%),linear-gradient(#06060a,#0b2a1d)}
-.art .shape{position:absolute;top:50%;left:50%;width:40%;aspect-ratio:1;transform:translate(-50%,-60%);border-radius:40% 60% 60% 40%/50% 40% 60% 50%;background:rgba(255,255,255,.12);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.3);animation:morph 8s ease-in-out infinite,spin 20s linear infinite}
-@keyframes morph{50%{border-radius:60% 40% 30% 70%/40% 60% 40% 60%}}
 @keyframes spin{to{rotate:360deg}}
 /* services */
 .svc{border-top:1px solid var(--line)}
@@ -144,52 +134,15 @@ footer{padding:30px 5vw;border-top:1px solid var(--line);display:flex;justify-co
 .work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
 .be-link{display:inline-flex;gap:10px;align-items:center;padding:14px 22px;border-radius:99px;border:1px solid var(--line);font-size:14px;transition:background .3s,border-color .3s}
 .be-link:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.3)}
-/* project art (manipulation) */
-.mp{position:absolute;inset:0;overflow:hidden;perspective:1200px;background:radial-gradient(circle at 70% 20%,var(--c3),transparent 60%),var(--bgc)}
-.mp .bgt{position:absolute;left:4%;top:10%;font-family:Syne;font-weight:800;font-size:16vh;line-height:.82;letter-spacing:-.04em;-webkit-text-stroke:1px rgba(255,255,255,.16);color:transparent;transform:rotate(-8deg);white-space:nowrap}
-.mp .orb{position:absolute;width:44vh;height:44vh;border-radius:50%;left:52%;top:42%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 35%,var(--c1),var(--c2) 45%,transparent 70%);filter:blur(8px);opacity:.9;animation:orb 7s ease-in-out infinite}
-@keyframes orb{50%{scale:1.12}}
-.mp .ring{position:absolute;left:52%;top:44%;width:62vh;height:62vh;margin:-31vh 0 0 -31vh;border-radius:50%;border:1px solid rgba(255,255,255,.22);animation:rring 18s linear infinite}
-.mp .ring:after{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 0 18px #fff}
-@keyframes rring{from{transform:rotateX(72deg) rotateZ(0)}to{transform:rotateX(72deg) rotateZ(360deg)}}
-.mp .dev{position:absolute;left:54%;top:42%;transform-style:preserve-3d}
-.mp .flt{animation:fl 6s ease-in-out infinite}
-@keyframes fl{50%{translate:0 -1.8vh}}
-.phone{position:absolute;width:19vh;height:39vh;border-radius:3.4vh;background:#08080c;padding:.7vh;box-shadow:0 5vh 9vh rgba(0,0,0,.65),inset 0 0 0 1px rgba(255,255,255,.18)}
-.phone .scr{width:100%;height:100%;border-radius:2.8vh;overflow:hidden;background:linear-gradient(165deg,var(--s1),var(--s2));position:relative;padding:3.4vh 1.5vh 1.5vh;display:flex;flex-direction:column;gap:1.1vh}
-.phone .scr:before{content:"";position:absolute;top:1vh;left:50%;width:5.5vh;height:1.4vh;margin-left:-2.75vh;border-radius:99px;background:#000}
-.ui-lg{display:flex;align-items:center;gap:.9vh}
-.ui-lg i{width:3.6vh;height:3.6vh;border-radius:1.1vh;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;font-style:normal;font-family:Syne;font-weight:800;font-size:1.7vh;color:#fff;flex-shrink:0}
-.ui-lg b{font-family:Syne;font-size:1.5vh;color:#fff;line-height:1.1}
-.ui-k{border-radius:1.4vh;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);flex-shrink:0}
-.ui-k.hero{height:9vh;background:linear-gradient(135deg,var(--c1),var(--c2));border:none;position:relative;overflow:hidden}
-.ui-k.hero:after{content:"";position:absolute;right:-2vh;bottom:-3vh;width:9vh;height:9vh;border-radius:50%;background:rgba(255,255,255,.25)}
-.ui-row{display:flex;gap:1vh}.ui-row .ui-k{flex:1;height:6vh}
-.ui-ln{height:.9vh;border-radius:99px;background:rgba(255,255,255,.22)}
-.ui-ln.s{width:60%}.ui-ln.xs{width:40%}
-.ui-nav{margin-top:auto;height:4.6vh;border-radius:1.6vh;background:rgba(255,255,255,.1);display:flex;justify-content:space-around;align-items:center}
-.ui-nav i{width:1.3vh;height:1.3vh;border-radius:50%;background:rgba(255,255,255,.5)}.ui-nav i:first-child{background:var(--c1);box-shadow:0 0 8px var(--c1)}
-.browser{position:absolute;width:min(56vh,60vw);height:min(35vh,38vw);border-radius:1.4vh;background:#08080c;padding:0 .6vh .6vh;box-shadow:0 5vh 9vh rgba(0,0,0,.65),inset 0 0 0 1px rgba(255,255,255,.18);display:flex;flex-direction:column}
-.browser .bar{height:3vh;display:flex;align-items:center;gap:.6vh;padding:0 1vh;flex-shrink:0}
-.browser .bar i{width:.9vh;height:.9vh;border-radius:50%;background:#ff5f57}.browser .bar i:nth-child(2){background:#febc2e}.browser .bar i:nth-child(3){background:#28c840}
-.browser .bar span{margin-left:1.4vh;height:1.6vh;flex:1;max-width:40%;border-radius:99px;background:rgba(255,255,255,.08)}
-.browser .scr{flex:1;border-radius:1vh;overflow:hidden;background:linear-gradient(165deg,var(--s1),var(--s2));position:relative;padding:2vh;display:flex;flex-direction:column;gap:1.2vh}
-.sun{position:absolute;right:8%;bottom:-38%;width:26vh;height:26vh;border-radius:50%;background:radial-gradient(circle,#ffd27a,var(--c1) 45%,var(--c2) 75%);box-shadow:0 0 6vh var(--c1)}
-.hz{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(transparent,rgba(0,0,0,.45));border-top:1px solid rgba(255,255,255,.25)}
-.bars2{display:flex;align-items:flex-end;gap:.7vh;height:9vh;margin-top:auto}
-.bars2 i{flex:1;border-radius:.5vh .5vh 0 0;background:linear-gradient(var(--c1),var(--c2));animation:eq 1.6s ease-in-out infinite alternate}
-.gch{position:absolute;padding:1vh 1.4vh;border-radius:1.4vh;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:1.5vh;font-weight:600;color:#fff;white-space:nowrap;box-shadow:0 2vh 4vh rgba(0,0,0,.35);display:flex;align-items:center;gap:.8vh;animation:fl 5s ease-in-out infinite}
-.gch b{width:2.4vh;height:2.4vh;border-radius:.8vh;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2));font-size:1.3vh}
-.spk{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 12px 2px #fff;animation:pulse 2.4s infinite}
-.g-sad{--bgc:#04140f;--c1:#19d39a;--c2:#0b7a5c;--c3:rgba(245,196,81,.35);--s1:#0d3b2e;--s2:#061a14}
-.g-lab{--bgc:#050b1a;--c1:#38bdf8;--c2:#6366f1;--c3:rgba(56,189,248,.35);--s1:#0f1b3d;--s2:#070d22}
-.g-hor{--bgc:#160807;--c1:#ff8a3d;--c2:#ff3d81;--c3:rgba(255,138,61,.35);--s1:#3a1530;--s2:#140812}
-.g-tal{--bgc:#0f0718;--c1:#b45cff;--c2:#ff4fa3;--c3:rgba(180,92,255,.35);--s1:#2a1145;--s2:#10081c}
-.card .art.cover-art{inset:-3%;background:linear-gradient(#0a1c21,#0c2a2e 50%,#0f4446)}
-.cover{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+.card .art.cover-art{inset:-4%;background:linear-gradient(#0a1c21,#0c2a2e 50%,#0f4446)}
+.cover{width:100%;height:100%;object-fit:var(--dfit,contain);object-position:var(--dpos,center) center;display:block}
 .has-cover .info{background:linear-gradient(transparent,rgba(0,0,0,.45))}
 .has-cover .info h3{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media(max-width:700px){.cover{object-fit:cover;object-position:var(--mpos,72%) center}}
+.has-cover.light .info{background:linear-gradient(transparent,rgba(255,255,255,.55))}
+.has-cover.light .chip{color:#3a2a2a;border-color:rgba(58,42,42,.25)}
+.has-cover.light .num{color:rgba(58,42,42,.6)}
+.has-cover.light .arrow{background:#2a1c1c;color:#fff}
 /* ===== Brick Breaker game ===== */
 .pp-wrap{display:grid;grid-template-columns:1fr 2.1fr;gap:40px;margin-top:60px;align-items:stretch}
 .pp-info p{color:var(--mute);font-size:18px;line-height:1.6;margin-bottom:28px}
@@ -266,15 +219,9 @@ kbd{font-family:inherit;font-size:12px;padding:2px 7px;border-radius:6px;border:
       <span class="num">01 / 04</span><div class="info"><div><h3>Al Sadeed Mobile App</h3><div class="chips"><span class="chip">Mobile App</span><span class="chip">UI/UX</span></div></div><div class="arrow">↗</div></div></a>
     <a class="card has-cover" data-c="VIEW" href="https://www.behance.net/gallery/257265387/Labexa" target="_blank" rel="noopener"><div class="art cover-art" style="background:linear-gradient(#070a15,#0a0c18 70%,#0a0c17)"><img class="cover" style="--mpos:40%" src="assets/labexa.webp" alt="Labexa — the digital backbone of the dental lab, web and mobile" loading="lazy"></div>
       <span class="num">02 / 04</span><div class="info"><div><h3>Labexa</h3><div class="chips"><span class="chip">Product Design</span><span class="chip">UI/UX</span></div></div><div class="arrow">↗</div></div></a>
-    <a class="card" data-c="VIEW" href="https://www.behance.net/gallery/257264111/Horizon-Academy-Website" target="_blank" rel="noopener"><div class="art"><div class="mp g-hor"><div class="bgt">HORIZON<br>ACADEMY</div><div class="orb"></div><div class="ring"></div>
-      <div class="dev"><div class="flt"><div class="browser" style="transform:translate(-55%,-55%) rotateY(-18deg) rotateX(10deg) rotateZ(-4deg)"><div class="bar"><i></i><i></i><i></i><span></span></div><div class="scr"><div class="sun"></div><div class="hz"></div><div class="ui-lg" style="position:relative"><i>H</i><b>Horizon Academy</b></div><div class="ui-ln" style="width:55%;height:1.6vh;background:rgba(255,255,255,.85);position:relative"></div><div class="ui-ln" style="width:40%;height:1.6vh;background:rgba(255,255,255,.85);position:relative"></div><div class="ui-ln xs" style="position:relative"></div><div style="width:9vh;height:3vh;border-radius:99px;background:#fff;position:relative;margin-top:.6vh"></div></div></div></div></div>
-      <div class="gch" style="left:17%;top:60%;animation-delay:-2s"><b>🎓</b>Enroll now</div><div class="gch" style="right:17%;top:18%"><b>▶</b>Website</div><i class="spk" style="left:34%;top:18%"></i><i class="spk" style="right:24%;bottom:32%;animation-delay:-.8s"></i></div></div>
+    <a class="card has-cover" data-c="VIEW" href="https://www.behance.net/gallery/257264111/Horizon-Academy-Website" target="_blank" rel="noopener"><div class="art cover-art" style="background:linear-gradient(#010d0b,#04120f 60%,#030c0b)"><img class="cover" style="--mpos:50%" src="assets/horizon.webp" alt="Horizon Academy — Arabic EdTech platform, web and responsive" loading="lazy"></div>
       <span class="num">03 / 04</span><div class="info"><div><h3>Horizon Academy Website</h3><div class="chips"><span class="chip">Website</span><span class="chip">UI/UX</span></div></div><div class="arrow">↗</div></div></a>
-    <a class="card" data-c="VIEW" href="https://www.behance.net/gallery/257263227/Tallah-Mobile-App" target="_blank" rel="noopener"><div class="art"><div class="mp g-tal"><div class="bgt">TALLAH<br>TALLAH</div><div class="orb"></div><div class="ring"></div>
-      <div class="dev"><div class="flt" style="animation-delay:-2s"><div style="position:absolute;width:19vh;height:39vh;transform:translate(-150%,-44%) rotateY(22deg) rotateX(8deg) rotateZ(-8deg) scale(.86);filter:brightness(.8)"><div class="phone"><div class="scr"><div class="ui-lg"><i>T</i><b>Tallah</b></div><div class="ui-k hero"></div><div class="ui-ln"></div><div class="ui-ln s"></div><div class="ui-row"><div class="ui-k"></div><div class="ui-k"></div></div><div class="ui-k" style="height:5vh"></div><div class="ui-nav"><i></i><i></i><i></i><i></i></div></div></div></div></div>
-      <div class="flt"><div style="position:absolute;width:19vh;height:39vh;transform:translate(-45%,-50%) rotateY(22deg) rotateX(8deg) rotateZ(-8deg)"><div class="phone"><div class="scr"><div class="ui-lg"><i>T</i><b>Tallah</b></div><div class="ui-k hero"></div><div class="ui-ln"></div><div class="ui-ln s"></div><div class="ui-row"><div class="ui-k"></div><div class="ui-k"></div></div><div class="ui-k" style="height:5vh"></div><div class="ui-nav"><i></i><i></i><i></i><i></i></div></div></div></div></div>
-      <div class="flt" style="animation-delay:-4s"><div style="position:absolute;width:19vh;height:39vh;transform:translate(60%,-40%) rotateY(22deg) rotateX(8deg) rotateZ(-8deg) scale(.86);filter:brightness(.8)"><div class="phone"><div class="scr"><div class="ui-lg"><i>T</i><b>Tallah</b></div><div class="ui-k hero"></div><div class="ui-ln"></div><div class="ui-ln s"></div><div class="ui-row"><div class="ui-k"></div><div class="ui-k"></div></div><div class="ui-k" style="height:5vh"></div><div class="ui-nav"><i></i><i></i><i></i><i></i></div></div></div></div></div></div>
-      <div class="gch" style="left:17%;top:16%;animation-delay:-1.5s"><b>♥</b>Mobile App</div><div class="gch" style="right:17%;top:62%"><b>✦</b>New</div><i class="spk" style="left:20%;bottom:30%"></i><i class="spk" style="right:26%;top:24%;animation-delay:-1.2s"></i></div></div>
+    <a class="card has-cover light" data-c="VIEW" href="https://www.behance.net/gallery/257263227/Tallah-Mobile-App" target="_blank" rel="noopener"><div class="art cover-art" style="background:linear-gradient(120deg,#f3dfeb,#fbefe8 50%,#fdf6f1)"><img class="cover" style="--mpos:78%;--dfit:cover;--dpos:30%" src="assets/tallah.webp" alt="Tallah — salon &amp; beauty booking app for Saudi Arabia, iOS and Android" loading="lazy"></div>
       <span class="num">04 / 04</span><div class="info"><div><h3>Tallah Mobile App</h3><div class="chips"><span class="chip">Mobile App</span><span class="chip">UI/UX</span></div></div><div class="arrow">↗</div></div></a>
   </div>
 </section>
@@ -388,9 +335,9 @@ const hw=document.querySelector('.h-wrap');
 const hs=gsap.to(hw,{x:()=>-(hw.scrollWidth-innerWidth),ease:'none',scrollTrigger:{trigger:hw,pin:true,scrub:1,end:()=>'+='+(hw.scrollWidth-innerWidth),invalidateOnRefresh:true}});
 document.querySelectorAll('.card').forEach(cd=>{
   gsap.from(cd,{scale:.8,rotateY:-25,opacity:.3,scrollTrigger:{trigger:cd,containerAnimation:hs,start:'left right',end:'center center',scrub:true}});
-  gsap.to(cd.querySelector('.art'),{xPercent:cd.classList.contains('has-cover')?3:8,scrollTrigger:{trigger:cd,containerAnimation:hs,scrub:true}});
-  cd.addEventListener('mousemove',e=>{const r=cd.getBoundingClientRect();const fx=(e.clientX-r.left)/r.width-.5,fy=(e.clientY-r.top)/r.height-.5;gsap.to(cd,{rotateY:fx*10,rotateX:-fy*10,transformPerspective:900,duration:.5});gsap.to(cd.querySelector('.dev'),{x:fx*40,y:fy*30,duration:.8});gsap.to(cd.querySelector('.orb'),{x:-fx*30,y:-fy*20,duration:1});gsap.to(cd.querySelector('.bgt'),{x:-fx*60,duration:1.2})});
-  cd.addEventListener('mouseleave',()=>{gsap.to(cd,{rotateX:0,rotateY:0,duration:.8});gsap.to(cd.querySelectorAll('.dev,.orb,.bgt'),{x:0,y:0,duration:1})})});
+  gsap.to(cd.querySelector('.art'),{xPercent:2,scrollTrigger:{trigger:cd,containerAnimation:hs,scrub:true}});
+  cd.addEventListener('mousemove',e=>{const r=cd.getBoundingClientRect();const fx=(e.clientX-r.left)/r.width-.5,fy=(e.clientY-r.top)/r.height-.5;gsap.to(cd,{rotateY:fx*10,rotateX:-fy*10,transformPerspective:900,duration:.5})});
+  cd.addEventListener('mouseleave',()=>gsap.to(cd,{rotateX:0,rotateY:0,duration:.8}))});
 
 // Services
 gsap.from('.svc-item',{x:-100,opacity:0,stagger:.15,duration:1,ease:'power4.out',scrollTrigger:{trigger:'.svc',start:'top 80%'}});
